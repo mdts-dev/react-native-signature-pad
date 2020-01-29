@@ -27,7 +27,7 @@ var content = `var SignaturePad = (function (document) {
     this.maxWidth = opts.maxWidth || 4.5;
     this.dotSize = 20.0
     this.penColor = opts.penColor || "black";
-    this.backgroundColor = opts.backgroundColor || "rgba(0,0,0,0)";
+    this.backgroundColor = "rgba(255,190,169,0)";
     this.onEnd = opts.onEnd;
     this.onBegin = opts.onBegin;
 
