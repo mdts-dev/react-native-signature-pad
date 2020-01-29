@@ -23,6 +23,7 @@ var content = (penColor, backgroundColor, dataURL) => `
 
     var enableSignaturePadFunctionality = function () {
       var signaturePad = new SignaturePad(signaturePadCanvas, {
+        dotSize: 20.0,
         penColor: '${penColor || 'black'}',
         backgroundColor: '${backgroundColor || 'white'}',
         onEnd: function() { finishedStroke(signaturePad.toDataURL()); }

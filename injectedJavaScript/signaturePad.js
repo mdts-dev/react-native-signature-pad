@@ -25,7 +25,7 @@ var content = `var SignaturePad = (function (document) {
     this.velocityFilterWeight = opts.velocityFilterWeight || 0.7;
     this.minWidth = opts.minWidth || 1.5;
     this.maxWidth = opts.maxWidth || 4.5;
-    this.dotSize = 10
+    this.dotSize = 20.0
     this.penColor = opts.penColor || "black";
     this.backgroundColor = opts.backgroundColor || "rgba(0,0,0,0)";
     this.onEnd = opts.onEnd;
