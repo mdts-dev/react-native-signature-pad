@@ -23,7 +23,6 @@ var content = (penColor, backgroundColor, dataURL) => `
 
     var enableSignaturePadFunctionality = function () {
       var signaturePad = new SignaturePad(signaturePadCanvas, {
-        dotSize: 20.0,
         penColor: '${penColor || 'black'}',
         backgroundColor: '${backgroundColor || 'white'}',
         onEnd: function() { finishedStroke(signaturePad.toDataURL()); }
@@ -34,7 +33,7 @@ var content = (penColor, backgroundColor, dataURL) => `
         point.x = translatedX;
         point.y = translatedY;
       }; */
-      signaturePad.minWidth = 1;
+      signaturePad.minWidth = 2.5;
       signaturePad.maxWidth = 4;
       if ('${dataURL}') {
         signaturePad.fromDataURL('${dataURL}');

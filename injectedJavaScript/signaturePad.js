@@ -23,11 +23,10 @@ var content = `var SignaturePad = (function (document) {
       opts = options || {};
 
     this.velocityFilterWeight = opts.velocityFilterWeight || 0.7;
-    this.minWidth = opts.minWidth || 1.5;
+    this.minWidth = 2.5;
     this.maxWidth = opts.maxWidth || 4.5;
-    this.dotSize = 20.0
     this.penColor = opts.penColor || "black";
-    this.backgroundColor = "rgba(255,190,169,0)";
+    this.backgroundColor = "rgba(0,0,0,0)";
     this.onEnd = opts.onEnd;
     this.onBegin = opts.onBegin;
 
