@@ -1,5 +1,4 @@
-var content = (penColor, backgroundColor, dataURL) => `
-
+var content = (minWidth, penColor, backgroundColor, dataURL) => `
   var showSignaturePad = function (signaturePadCanvas, bodyWidth, bodyHeight) {
     /*We're rotating by 90% -> Flip X and Y*/
     /*var width = bodyHeight;
@@ -23,6 +22,7 @@ var content = (penColor, backgroundColor, dataURL) => `
 
     var enableSignaturePadFunctionality = function () {
       var signaturePad = new SignaturePad(signaturePadCanvas, {
+        minWidth: ${minWidth} || 4.5,
         penColor: '${penColor || 'black'}',
         backgroundColor: '${backgroundColor || 'white'}',
         onEnd: function() { finishedStroke(signaturePad.toDataURL()); }
@@ -33,8 +33,8 @@ var content = (penColor, backgroundColor, dataURL) => `
         point.x = translatedX;
         point.y = translatedY;
       }; */
-      signaturePad.minWidth = 3.5;
-      signaturePad.maxWidth = 5.5;
+      signaturePad.minWidth = ${minWidth} || 4.5;
+      signaturePad.maxWidth = 15.5;
       if ('${dataURL}') {
         signaturePad.fromDataURL('${dataURL}');
       }
