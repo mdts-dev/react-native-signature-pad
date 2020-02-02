@@ -21,6 +21,7 @@ var content = (minWidth, penColor, backgroundColor, dataURL) => `
     };
 
     var enableSignaturePadFunctionality = function () {
+      alert(minWidth)
       var signaturePad = new SignaturePad(signaturePadCanvas, {
         minWidth: ${minWidth} || 4.5,
         penColor: '${penColor || 'black'}',
